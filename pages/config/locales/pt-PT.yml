@@ -35,21 +35,28 @@ pt-PT:
       pages:
         delete: Remover esta página para sempre
         edit: Editar esta página
+        new: Adicionar uma sub página
+        expand_collapse: Expandir ou colapsar sub páginas
         page:
-          view_live_html: Ver esta página agora <br/><em>(uma nova janela será aberta)</em>
+          view_live_html: Ver esta página agora <br/><em>(será aberta uma nova janela)</em>
           hidden: escondida
           draft: Rascunho
+        form:
+          preview: Prever
+          preview_changes: Prever as alterações antes de as submeter
         form_new_page_parts:
           title: Título
         form_page_parts:
           create_content_section: Criar secção de conteúdo
           delete_content_section: Apagar secção de conteúdo
+          reorder_content_section: Reordenar secções de conteúdo
+          reorder_content_section_done: Acabei de reordenar as secções de conteúdo
         form_advanced_options:
           toggle_advanced_options: Clique aqui para aceder às configurações de meta tag e opções do menu
           page_options: Opções de página
           parent_page: Página pai
           advanced_options: Opções avançadas
-          custom_title: Título opcional
+          custom_slug: Alias
           show_in_menu_title: Mostrar no menu
           show_in_menu_description: Mostra esta página no menu do site
           show_in_menu_help: "Desmarque esta opção caso queira remover a página do menu do site. Pode ser útil caso queira ligar outra página a esta, mas não quer que esta apareça no menu do site."
@@ -60,13 +67,28 @@ pt-PT:
           link_url: "Redirecionar esta página para outro site ou página."
           link_url_help: "Se você quer que esta página seja redicionada para outro site ou página quando você clicar nesta página no menu, escreva o URL. ex. http://google.com ou deixe em branco."
           parent_page_help: "Se você quer colocar esta página abaixo de outra página no menu, selecione aqui qual é a página ou deixe em branco caso queria a página na raiz do menu."
+          menu_title_help: "Se quer que o menu mostre um título diferente daquele que é mostrado na página, escreva aqui."
+          custom_slug_help: "O alias é um identificador compreendido por humanos, utilizado na formação do endereço, por exemplo &apos;acerca-de-nos&apos;. Para alterar o alias que é gerado automaticamente, escreva aqui o novo alias."
           custom_title_help: "Se você quer que a página tenha um título diferente do que é mostrado no menu então selecione &apos;Texto&apos; e escreva o novo título."
+          layout_template: Modelo de esquema
+          layout_template_help: Pode escolher um modelo de esquema para esta página
+          view_template: Ver modelo
+          view_template_help: "Pode escolher um modelo de vista, diferente para esta página."
+        form_advanced_options_seo:
+          seo: Optimizações para Motores de Pesquisa
+          seo_override_title: Titulo no navegador
+          seo_override_title_help: Escreva um título com 5-10 palavras que resuma o conteúdo desta página.
+          meta_keywords_title: Meta palavras
+          meta_keywords_help: Escreva 5-10 palavras que se relacionam com esta página. Separe as palávras com virgulas.
+          meta_description_title: Descrição meta
+          meta_description_help: "Escreva de forma concisa, duas ou três frase, sobre o conteúdo desta página."
         actions:
           create_new_page: Criar uma nova página
           reorder_pages: Reordenar as Páginas
           reorder_pages_done: Terminei de reordenar as Páginas
         records:
           no_pages_yet: Ainda não existem páginas. Clique em "Criar Nova Página" para adicionar a sua primeira página.
+        translator_access: Não tem as permissões necessárias para alterar páginas nesta lingua.
   activerecord:
     models:
       refinery/page: Página

@@ -1,0 +1,76 @@
+pt-PT:
+  refinery:
+    js:
+      admin:
+        confirm_changes: Qualquer alteração que tenha feito vai ser perdida. Tem a certeza que que continuar sem gravar?
+    plugins:
+      refinery_core:
+        title: Refinery
+        description: Core refinery plugin
+      refinery_dialogs:
+        title: Dialogs
+        description: Refinery dialogs plugin
+    welcome:
+      there_are_no_users: "Ainda não existem utilizadores, por isso vamos ter que criar um."
+    crudify:
+      created: '%{what} foi adicionado com sucesso.'
+      updated: '%{what} foi atualizado com sucesso.'
+      destroyed: '%{what} foi removido com sucesso.'
+    site_bar:
+      log_out: Sair
+      switch_to_your_website: Mudar para o website
+      switch_to_your_website_editor: Mudar para o editor do website
+    admin:
+      menu:
+        reorder_menu: Reordenar menu
+        reorder_menu_done: Acabei de reordenar o menu
+      dialogs:
+        show:
+          save: Gravar
+          cancel: Cancelar
+      continue_editing:
+        save_and_continue_editing: 'Gravar & continuar a editar'
+      form_actions:
+        save: Gravar
+        cancel: Cancelar
+        cancel_lose_changes: If you cancel you will lose any changes you have made here
+        delete: Remover
+        close: Fechar
+      image_picker:
+        none_selected: "Não existe uma imagem selecionada, carrge aqui para adicionar uma."
+        remove_current: Remover a imagem corrente
+        change: Clique aqui para escolher uma imagem
+        show: Mostar
+      resource_picker:
+        download_current: Descarregar o ficheiro corrente
+        opens_in_new_window: Abre numa nova janela
+        remove_current: "Remove o ficheiro corrente"
+        no_resource_selected: 'Não existe nenhum ficheiro selecionado, carregue aqui para adicionar um.'
+        name: Adicionar Ficheiro
+        current: Ficheiro corrente
+      search:
+        button_text: Pesquisar
+        results_for: "Resultados da pesquisa para '%{query}'"
+        no_results: 'Desculpe, não foram encontrados resultados'
+      delete:
+        message: "Tem a certeza que quer remover '%{title}'?"
+      error_messages:
+        problems_in_following_fields: Existem problemas com os seguintes campos
+      help: ajuda
+    message:
+      close: Fechar
+      close_this_message: Fechar esta mensagem
+    draft_page_message:
+      not_live: "Esta página NÃO está disponível para ser vista pelo público."
+    footer:
+      copyright: "Copyright © %{year} %{site_name}"
+    no_script:
+      enable_javascript_html: Para ter todas as funcionalidades desta página é necessário ablitar o JavaScript.
+      here_are: Aqui estão os
+      instructions_enable_javascript_html: instruções para como ablitar o JavaScript no seu navegador
+  time:
+    formats:
+      short: "%A, %d %B %Y"
+  will_paginate:
+    previous_label: "&laquo;"
+    next_label: "&raquo;"

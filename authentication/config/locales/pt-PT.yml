@@ -1,0 +1,73 @@
+pt-PT:
+  refinery:
+    plugins:
+      refinery_users:
+        title: Utilizadores
+        description: Gerir utilizadores
+    admin:
+      users:
+        delete: Remover este utilizador para sempre
+        edit: Editar este utilizador
+        update:
+          cannot_remove_user_plugin_from_current_user: "Voce não pode remover o plugin 'Utlizadores' a partir da conta atualmente logada."
+        form:
+          blank_password_keeps_current: Deixar a senha em branco mantém a senha atual
+          plugin_access: Acesso
+          role_access: Nível de Permissão
+          enable_all: habilitar todos
+        actions:
+          create_new_user: Criar Novo Utilizador
+        user:
+          email_user: Enviar e-mail para este utilizador
+          preview: "(%{who}) criado em %{created_at}"
+    sessions:
+      new:
+        hello_please_sign_in: "Olá! Faça o login"
+        sign_in: Entrar
+        forgot_password: Esqueci a minha senha
+    users:
+      new:
+        fill_form: Preencha o formulário abaixo com seus dados pra poder começar.
+        sign_up: Registar
+      create:
+        welcome: 'Bem-vindo, %{who}'
+      forgot:
+        email_address: Endereço de email
+        enter_email_address: "Por favor, preencha o endereço de email da sua conta."
+        reset_password: Recuperar senha
+        blank_email: Voce não preencheu um endereço de e-mail.
+        email_not_associated_with_account_html: "Desculpe, '%{email}' não está associado a uma conta. <br/>Tem certeza que você digitou o endereço de email correto?"
+        email_reset_sent: Foi-lhe enviado um email com um link para recuperar sua senha.
+        password_encryption: "Precisa redefinir sua senha pois existem mudanças nos métodos de criptografia usados pelo Refinery, as senhas são armazenadas com uma encriptação maior do que anteriormente."
+      reset:
+        code_invalid: "Lamentamos, mas este código reset expirou ou é inválido. Se está tendo problemas tente copiar e colar a URL do seu e-mail em seu navegador ou reinicie o processo de mudança de senha."
+        successful: "Senha alterada com sucesso para o e-mail %{email}"
+        pick_new_password_for: "Digite uma nova senha para o e-mail %{email}"
+        reset_password: Recuperar senha
+    user_mailer:
+      reset_notification:
+        subject: Link para alterar a sua senha
+        reset_request_received_for: "Recebido um pedido para alterar a senha do utilizador %{username}"
+        visit_this_url: Visite esse endere?o para escolher uma nova senha
+        remain_same_if_no_action: "Se não for tomada uma ação a senha vai permanecer a mesma"
+
+    roles:
+      superuser: Superuser
+      refinery: Refinery
+  devise:
+    failure:
+      unauthenticated: "É necessário fazer login para poder continuar."
+      invalid: "Nome de utilizador ou senha incorrectos."
+    sessions:
+      signed_in: Fez login com sucesso.
+  activerecord:
+    models:
+      refinery/user: user
+    attributes:
+      refinery/user: 
+        login: Login
+        username: Nome de utilizador
+        password: Senha
+        password_confirmation: Confirmação da senha
+        email: Email
+        remember_me: Lembrar se de mim
