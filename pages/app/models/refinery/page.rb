@@ -105,7 +105,7 @@ module Refinery
 
       # Finds pages by their slug.  See by_title
       def by_slug(slug, conditions={})
-        locales = Refinery.i18n_enabled? ? Refinery::I18n.frontend_locales : ::I18n.locale
+        locales = Refinery.i18n_enabled? ? Refinery::I18n.frontend_locales.map(&:to_s) : ::I18n.locale.to_s
         with_globalize({ :locale => locales, :slug => slug }.merge(conditions))
       end
 
@@ -148,7 +148,7 @@ module Refinery
 
       # Wrap up the logic of finding the pages based on the translations table.
       def with_globalize(conditions = {})
-        conditions = {:locale => ::Globalize.locale}.merge(conditions)
+        conditions = {:locale => ::Globalize.locale.to_s}.merge(conditions)
         globalized_conditions = {}
         conditions.keys.each do |key|
           if (translated_attribute_names.map(&:to_s) | %w(locale)).include?(key.to_s)
@@ -418,21 +418,6 @@ module Refinery
         part.title == part_title.to_s or
         part.title.downcase.gsub(" ", "_") == part_title.to_s.downcase.gsub(" ", "_")
       end
-    end
-
-    # In the admin area we use a slightly different title to inform the which pages are draft or hidden pages
-    # We show the title from the next available locale if there is no title for the current locale
-    def title_with_meta
-      if self.title.present?
-        title = [self.title]
-      else
-        title = [self.translations.detect {|t| t.title.present?}.title]
-      end
-
-      title << "<em>(#{::I18n.t('hidden', :scope => 'refinery.admin.pages.page')})</em>" unless show_in_menu?
-      title << "<em>(#{::I18n.t('draft', :scope => 'refinery.admin.pages.page')})</em>" if draft?
-
-      title.join(' ')
     end
 
     # Used to index all the content on this page so it can be easily searched.
