@@ -33,7 +33,7 @@ pt-PT:
       form_actions:
         save: Gravar
         cancel: Cancelar
-        cancel_lose_changes: If you cancel you will lose any changes you have made here
+        cancel_lose_changes: Se cancelar vai perder as alterações feitas aqui
         delete: Remover
         close: Fechar
       image_picker:
