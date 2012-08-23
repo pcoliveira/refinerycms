@@ -16,7 +16,7 @@ pt-PT:
           role_access: Nível de Permissão
           enable_all: habilitar todos
         actions:
-          create_new_user: Criar Novo Utilizador
+          create_new_user: Adicionar novo utilizador
         user:
           email_user: Enviar e-mail para este utilizador
           preview: "(%{who}) criado em %{created_at}"
