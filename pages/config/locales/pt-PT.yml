@@ -56,6 +56,7 @@ pt-PT:
           page_options: Opções de página
           parent_page: Página pai
           advanced_options: Opções avançadas
+          menu_title: Título do menu
           custom_slug: Alias
           show_in_menu_title: Mostrar no menu
           show_in_menu_description: Mostra esta página no menu do site
@@ -69,7 +70,6 @@ pt-PT:
           parent_page_help: "Se você quer colocar esta página abaixo de outra página no menu, selecione aqui qual é a página ou deixe em branco caso queria a página na raiz do menu."
           menu_title_help: "Se quer que o menu mostre um título diferente daquele que é mostrado na página, escreva aqui."
           custom_slug_help: "O alias é um identificador compreendido por humanos, utilizado na formação do endereço, por exemplo &apos;acerca-de-nos&apos;. Para alterar o alias que é gerado automaticamente, escreva aqui o novo alias."
-          custom_title_help: "Se você quer que a página tenha um título diferente do que é mostrado no menu então selecione &apos;Texto&apos; e escreva o novo título."
           layout_template: Modelo de esquema
           layout_template_help: Pode escolher um modelo de esquema para esta página
           view_template: Ver modelo

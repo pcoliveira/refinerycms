@@ -24,7 +24,7 @@ pt-PT:
       new:
         hello_please_sign_in: "Olá! Faça o login"
         sign_in: Entrar
-        forgot_password: Esqueci a minha senha
+        forgot_password: Esqueci-me da minha senha
     user_mailer:
       reset_notification:
         subject: Link para alterar a sua senha
@@ -57,6 +57,7 @@ pt-PT:
     failure:
       unauthenticated: "É necessário fazer login para poder continuar."
       invalid: "Nome de utilizador ou senha incorrectos."
+      already_authenticated: "O utilizador já está autenticado."
     sessions:
       signed_in: Fez login com sucesso.
       refinery_user:
