@@ -22,8 +22,8 @@ module Refinery
     #   GET /about/mission
     #
     def show
-      if current_user_can_view_page?
-        if should_skip_to_first_child?
+      if page_is_visible?
+        if should
           redirect_to refinery.url_for(first_live_child.url)
         elsif page.link_url.present?
           redirect_to page.link_url
@@ -53,8 +53,8 @@ module Refinery
       page.skip_to_first_child && first_live_child
     end
 
-    def current_user_can_view_page?
-      page.live? || current_refinery_user_can_access?("refinery_pages")
+    def page_is_visible?
+      page.live?
     end
 
     def current_refinery_user_can_access?(plugin)
