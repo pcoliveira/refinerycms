@@ -1,5 +1,5 @@
 Refinery::Core::Engine.routes.draw do
-  namespace :admin, :path => 'refinery' do
+  namespace :admin, :path => 'admin' do
     get 'dashboard', :to => 'dashboard#index', :as => :dashboard
 
     get 'disable_upgrade_message',

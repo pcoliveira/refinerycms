@@ -3,7 +3,7 @@ Refinery::Core::Engine.routes.draw do
     require 'devise'
     devise_for :refinery_user,
                :class_name => 'Refinery::User',
-               :path => 'refinery/users',
+               :path => 'admin/users',
                :controllers => { :registrations => 'refinery/users' },
                :skip => [:registrations],
                :path_names => { :sign_out => 'logout',
@@ -12,10 +12,10 @@ Refinery::Core::Engine.routes.draw do
 
     # Override Devise's other routes for convenience methods.
     devise_scope :refinery_user do
-      get '/refinery/login', :to => "sessions#new", :as => :login
-      get '/refinery/logout', :to => "sessions#destroy", :as => :logout
-      get '/refinery/users/register' => 'users#new', :as => :signup
-      post '/refinery/users/register' => 'users#create', :as => :signup
+      get '/admin/login', :to => "sessions#new", :as => :login
+      get '/admin/logout', :to => "sessions#destroy", :as => :logout
+      get '/admin/users/register' => 'users#new', :as => :signup
+      post '/admin/users/register' => 'users#create', :as => :signup
     end
   rescue RuntimeError => exc
     if exc.message =~ /ORM/
@@ -30,7 +30,7 @@ Refinery::Core::Engine.routes.draw do
     end
   end
 
-  namespace :admin, :path => 'refinery' do
+  namespace :admin, :path => 'admin' do
     resources :users, :except => :show
   end
 end
