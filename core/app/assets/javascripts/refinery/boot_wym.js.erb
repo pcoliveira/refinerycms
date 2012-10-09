@@ -26,10 +26,10 @@ var wymeditors_loaded = 0;
 // supply custom_wymeditor_boot_options if you want to override anything here.
 if (typeof(custom_wymeditor_boot_options) == "undefined") { custom_wymeditor_boot_options = {}; }
 var form_actions =
-"<div id='dialog-form-actions' class='form-actions'>"
+"<div id='dialog-form-actions' class='form-actions' style='margin-bottom:0px'>"
   + "<div class='form-actions-left'>"
-    + "<input id='submit_button' class='wym_submit btn btn-inverse' type='submit' value='{Insert}' class='button' />"
-    + "<a href='' class='wym_cancel close_dialog btn btn-info'>{Cancel}</a>"
+    + "<input id='submit_button' class='wym_submit btn btn-inverse button' type='submit' value='{Insert}' class='button' />"
+    + "<a href='' class='wym_cancel close_dialog btn btn-info button'>{Cancel}</a>"
   + "</div>"
 + "</div>";
 var wymeditor_boot_options = $.extend({
@@ -158,7 +158,7 @@ var wymeditor_boot_options = $.extend({
       + "</form>"
     + "</div>"
 
-  , dialogPath: "<%= Refinery::Core::Engine.routes.url_helpers.admin_dialogs_path %>/"
+  , dialogPath: "/admin/dialogs/"
   , dialogFeatures: {
       width: 866
     , height: 455
