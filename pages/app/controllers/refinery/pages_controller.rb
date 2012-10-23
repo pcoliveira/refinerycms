@@ -46,7 +46,7 @@ module Refinery
   protected
 
     def requested_friendly_id
-      "#{params[:path]}/#{params[:id]}".split('/').last
+      "#{params[:path]}/#{params[:id_ref]}".split('/').last
     end
 
     def should_skip_to_first_child?
@@ -80,7 +80,7 @@ module Refinery
                 when "home"
                   Refinery::Page.where(:link_url => '/').first
                 when "show", "preview"
-                  Refinery::Page.find_by_path_or_id(params[:path], params[:id])
+                  Refinery::Page.find_by_path_or_id(params[:path], params[:id_ref])
                 end
       @page || (error_404 if fallback_to_404)
     end
