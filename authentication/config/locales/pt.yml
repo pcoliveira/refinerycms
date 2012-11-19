@@ -1,4 +1,4 @@
-pt-PT:
+pt:
   refinery:
     plugins:
       refinery_users:
@@ -22,7 +22,7 @@ pt-PT:
           preview: "(%{who}) criado em %{created_at}"
     sessions:
       new:
-        hello_please_sign_in: "Olá! Faça o login"
+        hello_please_sign_in: "Faça o login"
         sign_in: Entrar
         forgot_password: Esqueci-me da minha senha
     user_mailer:
